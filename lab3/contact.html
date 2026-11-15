@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти — Том Голланд</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="top">
+    <header>
+        <h1>Контакти</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="contact.html" class="active">Контакти</a></li>
+                <li><a href="https://uk.wikipedia.org/wiki/Том_Голланд_(актор)" target="_blank" rel="noopener">Джерело</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Блок з біог та фото -->
+        <section class="bio-section">
+            <!-- біо -->
+            <article class="bio-content">
+                <img src="images/spiderman.jpg" alt="Том Голланд молодий" class="float-left">
+
+                <p>
+                    Том Голланд народився <strong>1 червня 1996 року</strong> в Лондоні у родині фотографа <em>Ніккі Елізабет Фрост</em> і письменника <em>Домініка Голланда</em>.
+                    З дитинства займався танцями та акробатикою, завдяки чому отримав головну роль у театральній постановці «Біллі Елліот».
+                </p>
+
+                <img src="images/uncharted.jpg" alt="Роль в Uncharted" class="float-right">
+
+                <p>
+                    Широку світову популярність йому принесла роль Пітера Паркера у фільмах про Людину-павука (2016–2021),
+                    що зробила його одним із найуспішніших молодих акторів сучасності.
+                </p>
+
+                <p class="clear-both">
+                    Голланд також відомий своєю благодійною діяльністю у фонді «The Brothers Trust» та головними ролями у фільмах «Неможливе», «Диявол назавжди» і «Uncharted: Незвідане».
+                </p>
+
+                <img src="images/crowded.jpg" alt="Переповнена кімната" class="no-float">
+            </article>
+
+            <!-- фото -->
+            <div class="absolute-positioning-demo">
+                <div class="stacked-images">
+                    <img src="images/spiderman.jpg" alt="Людина-павук" class="stacked-img img-1">
+                    <img src="images/uncharted.jpg" alt="Нейтан Дрейк" class="stacked-img img-2">
+                    <img src="images/crowded.jpg" alt="Денні Салліван" class="stacked-img img-3">
+                </div>
+            </div>
+        </section>
+
+        <!-- меню -->
+        <input type="radio" name="form-tab" id="tab-register" checked hidden>
+        <input type="radio" name="form-tab" id="tab-feedback" hidden>
+
+        <div class="form-tabs">
+            <label for="tab-register" class="tab-button">Форма реєстрації</label>
+            <label for="tab-feedback" class="tab-button">Форма зворотного зв'язку</label>
+            <button type="button" class="tab-button" id="open-login">Форма входу</button>
+        </div>
+
+        <!-- реєстрація -->
+        <section class="form-section" id="register">
+            <div class="form-header">
+                <div class="user-icon">0</div>
+                <h3>Форма реєстрації</h3>
+            </div>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">Ім'я</label>
+                        <input type="text" id="fname" name="fname" placeholder="Ім'я" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">Прізвище</label>
+                        <input type="text" id="lname" name="lname" placeholder="Прізвище" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Стать</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" checked> Чоловіча
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female"> Жіноча
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Вік</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="21">
+                </div>
+
+                <div class="form-group">
+                    <label for="bdate">Дата народження</label>
+                    <input type="date" id="bdate" name="bdate">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Країна проживання</label>
+                    <select id="country" name="country" required>
+                        <option value="">Оберіть країну проживання</option>
+                        <option value="ua">Україна</option>
+                        <option value="uk">Велика Британія</option>
+                        <option value="us">США</option>
+                        <option value="ca">Канада</option>
+                        <option value="de">Німеччина</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефону</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+38(0XX)XXX-XX-XX" pattern="[+]?[0-9]{10,13}">
+                </div>
+
+                <div class="form-group">
+                    <label for="social">Посилання на соц.мережу</label>
+                    <input type="url" id="social" name="social" placeholder="https://instagram.com/...">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Електронна пошта</label>
+                    <input type="email" id="email" name="email" placeholder="Ел. пошта" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Пароль" required minlength="6">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required> Чи згідні Ви з умовами?
+                    </label>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Зареєструватися</button>
+                    <button type="reset" class="btn-reset">Відмінити</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- зв"яток -->
+        <section class="form-section" id="feedback">
+            <div class="form-header">
+                <h3>Форма зворотного зв'язку</h3>
+            </div>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="fb-name">Ім'я</label>
+                    <input type="text" id="fb-name" name="fb-name" placeholder="Ім'я" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-email">Ел. пошта</label>
+                    <input type="email" id="fb-email" name="fb-email" placeholder="Ел. пошта" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Тема повідомлення</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Оберіть тему</option>
+                        <option value="general">Загальне питання</option>
+                        <option value="support">Технічна підтримка</option>
+                        <option value="coop">Співпраця</option>
+                        <option value="other">Інше</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Повідомлення</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Введіть ваше повідомлення..." required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Відправити</button>
+                    <button type="reset" class="btn-reset">Очистити</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- лінки -->
+        <div class="social-links">
+            <h3>Посилання на соц.мережі</h3>
+            <div class="social-circles">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-circle" title="Facebook">Fb</a>
+                <a href="https://x.com/TomHolland1996" target="_blank" rel="noopener" class="social-circle" title="Twitter">Twit</a>
+                <a href="https://www.instagram.com/tomholland2013/" target="_blank" rel="noopener" class="social-circle" title="Instagram">inst</a>
+                <a href="https://www.imdb.com/name/nm4043618/" target="_blank" rel="noopener" class="social-circle" title="IMDb">in</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright &copy; 2026 | mob. 0978534631 | email: tarasiuk@example.com | ЛР №1 Тарасюк Максим ТР-51</p>
+    </footer>
+
+
+    <!-- модальне вікно входу -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="close-login">&times;</button>
+            <div class="form-header">
+                <h3>Форма входу</h3>
+            </div>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="login-email">Логін</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="Логін" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-pass">Пароль</label>
+                    <input type="password" id="login-pass" name="login-pass" placeholder="Пароль" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-submit">Вхід</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a href="#top" class="scroll-top">&uarr;</a>
+
+    <script>
+        var modal = document.getElementById('login-modal');
+        document.getElementById('open-login').onclick = function () { modal.classList.add('open'); };
+        document.getElementById('close-login').onclick = function () { modal.classList.remove('open'); };
+    </script>
+</body>
+</html>
