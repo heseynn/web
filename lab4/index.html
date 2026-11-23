@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тест з JavaScript - ЛР №4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quiz.js" defer></script>
+    <script src="questions.js" defer></script>
+</head>
+<body>
+    <header>
+        <p class="subtitle">Лабораторна робота №4 Варіант 15</p>
+        <h1>КОМПЛЕКСНИЙ ТЕСТ: JS, DOM, ОБ’ЄКТИ, ФОРМИ</h1>
+        <p class="subtitle">Тарасюк Максим Вікторович ТР-51</p>
+    </header>
+    <main class="quiz">
+        <section id="start">
+            <h2>Початок тесту</h2>
+            <p>Введіть свої дані та оберіть рівень. У спробі 10 завдань. За кожну повністю правильну відповідь ви отримаєте 1 бал.</p>
+            <form id="start-form">
+                <div class="form-row">
+                    <div class="form-group"><label for="student">Ім’я</label>
+                        <input id="student" name="student" required maxlength="60" placeholder="Максим"></div>
+                    <div class="form-group"><label for="group">Група</label>
+                        <input id="group" name="group" required maxlength="25" placeholder="ТР-51"></div>
+                </div>
+                <div class="form-group"><label for="level">Рівень складності</label>
+                    <select id="level" name="level">
+                        <option value="easy">Початковий</option>
+                        <option value="medium">Середній</option>
+                        <option value="hard">Складний</option>
+                    </select></div>
+                <button class="btn-submit">Почати тест</button>
+            </form>
+            <p id="previous" hidden></p>
+        </section>
+        <form id="test" hidden>
+            <h2 id="test-heading" tabindex="-1">Завдання</h2>
+            <div id="questions"></div>
+            <button class="btn-submit">Завершити тест</button>
+        </form>
+        <section id="result" hidden>
+            <h2 id="result-heading" tabindex="-1">Результат тесту</h2>
+            <p id="score"></p>
+            <p id="storage-note" hidden>Браузер не дозволив зберегти результат цієї спроби.</p>
+            <ol id="review"></ol>
+            <button id="again" class="btn-submit" type="button">Пройти ще раз</button>
+        </section>
+    </main>
+    <footer>Лабораторна робота №4 Робота з JavaScript</footer>
+</body>
+</html>
